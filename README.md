@@ -1,7 +1,9 @@
 <<<<<<< HEAD
+
 # test
-This is for testing purpose
-=======
+
+# This is for testing purpose
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,4 +74,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 27ad27b (Initial commit)
+
+> > > > > > > 27ad27b (Initial commit)
+
+=========> How to push repo to remote <=================
+npx create-react-app my-app
+cd my-app
+git init
+git add .
+git commit -m "Initial commit"
+
+create a repo and copy http
+git remote add origin https://github.com/yourusername/my-app.git
+git branch -M main
+git pull origin main --rebase
+git add .
+git rebase --continue
+
+git push -u origin main
+npm install gh-pages --save-dev
+
+Package.json
+2 line
+"homepage": "https://yourusername.github.io/my-app"
+
+inside script last 2 line
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+npm run deploy
